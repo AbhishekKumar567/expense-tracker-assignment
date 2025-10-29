@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Expense Tracker Dashboard</h1>
+
+{% if alert %}
+    <div style="color: red; font-weight: bold;">
+        {{ alert }}
+    </div>
+{% endif %}
+
+<hr>
+
+<h2>Add Expense</h2>
+<form method="post" action="/expense/add">
+
+    <label><b>Select Category:</b></label><br>
+    <select name="category">
+        {% for c in categories %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label><b>Enter Amount:</b></label><br>
+    <input type="number" step="0.01" name="amount" placeholder="Amount" required /><br><br>
+
+    <label><b>Note (optional):</b></label><br>
+    <input type="text" name="note" placeholder="Description (e.g. Lunch at KFC)" /><br><br>
+
+    <button type="submit">Add Expense</button>
+</form>
+
+<hr>
+
+<h2>Set Monthly Budget</h2>
+<form method="post" action="/budget/set">
+
+    <label><b>Select Category:</b></label><br>
+    <select name="category">
+        {% for c in categories %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label><b>Enter Budget Amount:</b></label><br>
+    <input type="number" step="0.01" name="amount" placeholder="Budget Amount" required /><br><br>
+
+    <button type="submit">Save Budget</button>
+</form>
+
+<hr>
+
+<a href="/report"><button>View Monthly Report</button></a>
+
+</body>
+</html>

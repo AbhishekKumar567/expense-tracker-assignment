@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><body>
+<h1>Monthly Report</h1>
+<h3>Total: {{total_spent}}</h3>
+<table border="1"><tr><th>Category</th><th>Budget</th><th>Spent</th><th>Remaining</th></tr>
+{% for r in rows %}
+<tr>
+<td>{{r.category}}</td>
+<td>{{r.budget if r.budget else 'N/A'}}</td>
+<td>{{r.spent}}</td>
+<td>{% if r.remaining is none %}No Budget
+{% elif r.remaining<0 %}<span style="color:red">Exceeded!</span>
+{% else %}{{r.remaining}}{% endif %}</td>
+</tr>{% endfor %}
+</table>
+<br><a href="/dashboard"><button>Back</button></a>
+</body></html>
