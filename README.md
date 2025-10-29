@@ -64,15 +64,15 @@
 # 🚀 Run using Docker
 Build image:
 
-docker build -t expense-tracker .
+- docker build -t expense-tracker .
 
 Make sure PostgreSQL is running on host & .env exists:
 
-DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
+- DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
 
 Run container:
 
-docker run -p 8000:8000 --env-file .env expense-tracker
+- docker run -p 8000:8000 --env-file .env expense-tracker
 
 - Visit in browser:
 http://127.0.0.1:8000
