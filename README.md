@@ -60,6 +60,7 @@
 
 5) Start the FastAPI server:
 - uvicorn app.main:app --reload
+- Visit in browser: http://127.0.0.1:8000
 
 # 🐳 Run using Docker
  Build image:
