@@ -1,6 +1,6 @@
-Expense Tracker — FastAPI + PostgreSQL + HTML
+# Expense Tracker Application
 
-This application helps users track expenses and set monthly budgets for categories.
+- This application helps users track expenses and set monthly budgets for categories with a global filter in YYYY-MM format.
 
 ✨ Features
 
@@ -32,33 +32,33 @@ This application helps users track expenses and set monthly budgets for categori
 
 🚀 Run the Project Locally
 # Clone the repository
-git clone https://github.com/AbhishekKumar567/expense-tracker-assignment.git
+- git clone https://github.com/AbhishekKumar567/expense-tracker-assignment.git
 
-cd expense-tracker-fastapi
+- cd expense-tracker-fastapi
 
 1) Create a virtual environment
 
  Windows:
 
- python -m venv venv
+ - python -m venv venv
  venv\Scripts\activate
 
  Mac/Linux:
 
- python3 -m venv venv
+ - python3 -m venv venv
  source venv/bin/activate
 
 2) Install dependencies:
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 3) Create PostgreSQL database:
-CREATE DATABASE expense_tracker;
+- CREATE DATABASE expense_tracker;
 
 4) Create .env file in project root:
-DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
+- DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
 
 5) Start the FastAPI server:
-uvicorn app.main:app --reload
+- uvicorn app.main:app --reload
 
 - Visit in browser:
 http://127.0.0.1:8000
