@@ -1,24 +1,24 @@
 Expense Tracker — FastAPI + PostgreSQL + HTML
 
-This application helps users track expenses and set monthly budgets by category.
+This application helps users track expenses and set monthly budgets for categories.
 
-Features
+✨ Features
 
-Add daily expenses with categories
+- Add daily expenses with categories
 
-Set monthly budgets per category (updates if already exists)
+- Set monthly budgets per category (update if exists)
 
-Alert when spending exceeds budget
+- Alert when spending exceeds budget
 
-View monthly report: total and per-category breakdown
+- View monthly reports: total & per-category breakdown
 
-Predefined categories: Food, Transport, Entertainment, Other
+- Predefined categories: Food, Transport, Entertainment, Other
 
-Uses FastAPI with Jinja2 templates (HTML UI)
+- FastAPI backend with Jinja2 HTML UI
 
-Supports running via local environment or Docker
+- Can run locally or inside Docker
 
-Tech Stack
+🛠 Tech Stack
 
 FastAPI
 
@@ -30,36 +30,32 @@ Jinja2 Templates
 
 Docker (optional)
 
-Run the Project Locally
+🚀 Run the Project Locally
+# Clone the repository
+git clone https://github.com/your-username/expense-tracker-fastapi.git
+cd expense-tracker-fastapi
 
-- git clone https://github.com/your-username/expense-tracker-fastapi.git
-- cd expense-tracker-fastapi
+1) Create a virtual environment
 
-Create virtual environment
+Windows:
 
-For windows 
 python -m venv venv
 venv\Scripts\activate
 
-For mac/linux
+
+Mac/Linux:
+
 python3 -m venv venv
 source venv/bin/activate
 
-install dependencies:
+2) Install dependencies:
 pip install -r requirements.txt
 
-Create PostgreSQL database:
-CREATE DATABASE expense_tracker
+3) Create PostgreSQL database:
+CREATE DATABASE expense_tracker;
 
-Create .env file:
+4) Create .env file in project root:
 DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
 
-Start server:
+5) Start the FastAPI server:
 uvicorn app.main:app --reload
-
-
-
-
-
-  
-
