@@ -1,6 +1,6 @@
 Expense Tracker — FastAPI + PostgreSQL + HTML
 
-This application helps users track expenses and set monthly budgets for categories.
+This application helps users track expenses and set monthly budgets for categories with a global filter in YYYY-MM format.
 
 ✨ Features
 
