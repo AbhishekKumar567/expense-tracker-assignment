@@ -7,6 +7,15 @@
 
 <h1>Expense Tracker Dashboard</h1>
 
+<!-- ===== GLOBAL MONTH FILTER ===== -->
+<form method="get" action="/dashboard">
+    <label><b>Filter by Month:</b></label>
+    <input type="month" name="period" value="{{ request.query_params.get('period') or '' }}">
+    <button type="submit">Apply</button>
+</form>
+
+<br>
+
 {% if alert %}
     <div style="color: red; font-weight: bold;">
         {{ alert }}
@@ -16,7 +25,8 @@
 <hr>
 
 <h2>Add Expense</h2>
-<form method="post" action="/expense/add">
+<form method="post" action="/expense/add?period={{period}}">
+<input type="hidden" name="period" value="{{ request.query_params.get('period') or '' }}">
 
     <label><b>Select Category:</b></label><br>
     <select name="category">
@@ -37,7 +47,8 @@
 <hr>
 
 <h2>Set Monthly Budget</h2>
-<form method="post" action="/budget/set">
+<form method="post" action="/budget/set?period={{period}}">
+<input type="hidden" name="period" value="{{ request.query_params.get('period') or '' }}">
 
     <label><b>Select Category:</b></label><br>
     <select name="category">

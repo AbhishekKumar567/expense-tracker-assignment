@@ -8,19 +8,21 @@ class Category(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=True, nullable=False)
 
+
 class Budget(Base):
     __tablename__ = "budgets"
     id = Column(Integer, primary_key=True)
     category_id = Column(Integer, ForeignKey("categories.id"))
-    month = Column(Integer)
-    year = Column(Integer)
+    period = Column(String, nullable=False)  # format YYYY-MM
     amount = Column(Numeric)
     category = relationship("Category")
+
 
 class Expense(Base):
     __tablename__ = "expenses"
     id = Column(Integer, primary_key=True)
     category_id = Column(Integer, ForeignKey("categories.id"))
+    period = Column(String, nullable=False)  # format YYYY-MM (matches dashboard month)
     amount = Column(Numeric, nullable=False)
     note = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
