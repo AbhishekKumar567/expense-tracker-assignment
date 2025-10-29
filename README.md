@@ -61,8 +61,8 @@
 5) Start the FastAPI server:
 - uvicorn app.main:app --reload
 
-# 🚀 Run using Docker
-Build image:
+# 🐳 Run using Docker
+ Build image:
 
 - docker build -t expense-tracker .
 
