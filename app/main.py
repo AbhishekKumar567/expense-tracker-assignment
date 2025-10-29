@@ -93,34 +93,6 @@ def set_budget(
     return RedirectResponse(f"/dashboard?period={period}", 303)
 
 
-# @app.get("/report", response_class=HTMLResponse)
-# def report(request: Request, db: Session = Depends(get_db)):
-#     period = request.query_params.get("period") or datetime.now().strftime("%Y-%m")
-
-#     total = db.query(func.sum(Expense.amount)).filter(Expense.period == period).scalar() or 0
-
-#     rows = []
-#     for c in db.query(Category).all():
-#         spent = db.query(func.sum(Expense.amount)).filter(
-#             Expense.category_id == c.id, Expense.period == period
-#         ).scalar() or 0
-#         budget = db.query(Budget.amount).filter(
-#             Budget.category_id == c.id, Budget.period == period
-#         ).scalar()
-#         rows.append({
-#             "category": c.name,
-#             "budget": float(budget) if budget else None,
-#             "spent": float(spent),
-#             "remaining": float(budget - spent) if budget else None
-#         })
-
-#     return templates.TemplateResponse("report.html", {
-#         "request": request,
-#         "total_spent": float(total),
-#         "rows": rows,
-#         "period": period
-#     })
-
 @app.get("/report", response_class=HTMLResponse)
 def report(request: Request, db: Session = Depends(get_db)):
 
