@@ -1,6 +1,7 @@
 # Expense Tracker Application
 
 - This application helps users track expenses and set monthly budgets for categories with a global filter in YYYY-MM format.
+- Report screen displays monthly expenses along with grouped monthly data category-wise.
 
 ✨ Features
 
