@@ -20,15 +20,15 @@ This application helps users track expenses and set monthly budgets for categori
 
 🛠 Tech Stack
 
-FastAPI
+- FastAPI
 
-PostgreSQL
+- PostgreSQL
 
-SQLAlchemy ORM
+- SQLAlchemy ORM
 
-Jinja2 Templates
+- Jinja2 Templates
 
-Docker (optional)
+- Docker 
 
 🚀 Run the Project Locally
 # Clone the repository
@@ -41,7 +41,6 @@ Windows:
 
 python -m venv venv
 venv\Scripts\activate
-
 
 Mac/Linux:
 
