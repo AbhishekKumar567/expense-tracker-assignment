@@ -31,8 +31,8 @@
 
 - Docker 
 
-🚀 Run the Project Locally
-# Clone the repository
+
+# 🚀 Run the Project Locally
 - git clone https://github.com/AbhishekKumar567/expense-tracker-assignment.git
 
 - cd expense-tracker-fastapi
@@ -60,6 +60,19 @@
 
 5) Start the FastAPI server:
 - uvicorn app.main:app --reload
+
+# 🚀 Run using Docker
+Build image:
+
+docker build -t expense-tracker .
+
+Make sure PostgreSQL is running on host & .env exists:
+
+DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
+
+Run container:
+
+docker run -p 8000:8000 --env-file .env expense-tracker
 
 - Visit in browser:
 http://127.0.0.1:8000
