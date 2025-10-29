@@ -32,7 +32,7 @@ This application helps users track expenses and set monthly budgets for categori
 
 🚀 Run the Project Locally
 # Clone the repository
-git clone https://github.com/your-username/expense-tracker-fastapi.git
+git clone https://github.com/AbhishekKumar567/expense-tracker-assignment.git
 cd expense-tracker-fastapi
 
 1) Create a virtual environment
